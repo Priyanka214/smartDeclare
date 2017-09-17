@@ -1,0 +1,283 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Smart  DECLARE</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <ion-segment [(ngModel)]="declare">
+      <ion-segment-button value="investment">
+        Investment
+      </ion-segment-button>
+      <ion-segment-button value="medical">
+        Medical
+      </ion-segment-button>
+      <ion-segment-button value="charity">
+        Charity
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+<!--  <ion-row>
+  <ion-col>
+    <ion-item>
+      Scheme
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     Investment
+    </ion-item>
+  </ion-col>
+</ion-row>-->
+  <div [ngSwitch]="declare">
+<!--    <div *ngSwitchCase="'investment'">
+    <ion-list no-lines>
+    <ion-row>
+    <ion-col>
+      <ion-item>
+        <button clear ion-button (click) = "present80CModal()">80C</button>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+       <ion-input type="number" [(ngModel)]="input80C"> </ion-input>
+      </ion-item>
+    </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80CCDModal()">80CCD</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80CCD"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80TTAModal()">SAV acct interest</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80TTA"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80GGModal()">HRA</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80GG"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80EModal()">Education Loan</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80E"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80EEModal()">Home Loan</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80EE"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+</ion-list>
+</div>-->
+<div *ngSwitchCase="'medical'">
+  <ion-list no-lines>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80DModal()">Medical Insurance</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80D"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80DDModal()">Medical Treatment</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80DD"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80DDBModal()">Medical Expenditure</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80DDB"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80UModal()">Self Disablitiy</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80U"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+</ion-list>
+</div>
+<div *ngSwitchCase="'charity'">
+  <ion-list no-lines>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80GGBModal()">Individual Contribution</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80GGB"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80GGCModal()">Company Contribution</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80GGC"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80RRBModal()">Income by Royality</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80RRB"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+  </ion-list>
+</div>
+<div *ngSwitchDefault>
+  <ion-list no-lines>
+  <ion-row>
+  <ion-col>
+    <ion-item>
+      <button clear ion-button (click) = "present80CModal()">80C</button>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="input80C"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+<ion-col>
+  <ion-item>
+    <button clear ion-button (click) = "present80CCDModal()">80CCD</button>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-item>
+   <ion-input type="number" [(ngModel)]="input80CCD"> </ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+<ion-row>
+<ion-col>
+  <ion-item>
+    <button clear ion-button (click) = "present80TTAModal()">SAV acct interest</button>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-item>
+   <ion-input type="number" [(ngModel)]="input80TTA"> </ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+<ion-row>
+<ion-col>
+  <ion-item>
+    <button clear ion-button (click) = "present80GGModal()">HRA</button>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-item>
+   <ion-input type="number" [(ngModel)]="input80GG"> </ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+<ion-row>
+<ion-col>
+  <ion-item>
+    <button clear ion-button (click) = "present80EModal()">Education Loan</button>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-item>
+   <ion-input type="number" [(ngModel)]="input80E"> </ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+<ion-row>
+<ion-col>
+  <ion-item>
+    <button clear ion-button (click) = "present80EEModal()">Home Loan</button>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-item>
+   <ion-input type="number" [(ngModel)]="input80EE"> </ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+</ion-list>
+</div>
+</div>
+  <button block ion-button (click)="goToIncomeTax()"> Continue </button>
+</ion-content>

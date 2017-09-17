@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Smart DECLARE</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="../assets/icon/customlogo.png" class="logo">
+  </ion-card>
+  <ion-list no-lines>
+    <ion-row>
+    <ion-col>
+      <ion-item>
+        Name
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+       <ion-input id="username" type="text" [(ngModel)]="username"> </ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        Age
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+       <ion-input type="number" [(ngModel)]="age"> </ion-input>
+      </ion-item>
+    </ion-col>
+</ion-row>
+    <ion-row radio-group [(ngModel)]="gender">
+    <ion-col>
+      <ion-item>
+        Gender
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-label class="radioBtn">Male</ion-label>
+        <ion-radio value="male"></ion-radio>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+       <ion-label class="radioBtn">Female</ion-label>
+        <ion-radio value="female"></ion-radio>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        Email
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+       <ion-input type="email" [(ngModel)]="email"> </ion-input>
+      </ion-item>
+    </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      Gross Salary
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+     <ion-input type="number" [(ngModel)]="grossSalary"> </ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      Financial Year
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-select [(ngModel)]="year" class="myCustomSelect">
+    <ion-option *ngFor = "let year of years">{{year.name}}
+    </ion-option>
+  </ion-select>
+  </ion-col>
+</ion-row>
+    <ion-item>
+      <ion-label class="info"> Provide your investement details on next page</ion-label>
+    </ion-item>
+  </ion-list>
+  <button block ion-button (click)= "goToDeclaration()"> Continue </button>
+</ion-content>

@@ -1,0 +1,27 @@
+page-home {
+  .logo{
+  	width: 50%;
+  	height:auto;
+  	margin-left:25%;
+  }
+  .info{
+    font-size: 13px;
+  }
+  .radioBtn{
+    white-space: nowrap;
+    overflow: visible;
+  }
+  .item-md {
+    padding-left: 10px;
+  }
+  .col {
+    padding: 0px;
+  }
+  ion-card {
+  	display :inline;
+  }
+  .myCustomSelect{
+  max-width: 100% !important;
+  }
+
+}

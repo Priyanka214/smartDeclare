@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Smart DECLARE</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="../assets/icon/incometax.png" class="logo">
+  </ion-card>
+  <ion-item>
+      Username
+       <ion-badge item-end>{{username}} </ion-badge>
+  </ion-item>
+  <ion-item>
+      Email
+       <ion-badge item-end>{{email}} </ion-badge>
+  </ion-item>
+  <ion-item>
+      Gross Income
+       <ion-badge item-end>Rs {{grossIncome}} </ion-badge>
+  </ion-item>
+  <ion-item>
+      Total Investment
+       <ion-badge item-end>Rs {{totalInvest}} </ion-badge>
+  </ion-item>
+<!--  <ion-item>
+      TaxWotDeclare+EduCess
+       <ion-badge item-end>Rs {{taxBeforeDeclare | round }} </ion-badge>
+  </ion-item>-->
+  <ion-item>
+      Tax+EduCess
+       <ion-badge item-end>Rs {{taxAfterDeclare| round }} </ion-badge>
+  </ion-item>
+
+</ion-content>
